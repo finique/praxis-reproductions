@@ -10,4 +10,4 @@ This is [Praxis](https://market-graphs.com/praxis): not a strategy to trade — 
 
 Full reports & methodology: **https://market-graphs.com/praxis**
 
-*A public-data reproduction is a reproduction, not our internal validation pipeline — but it lands on the same numbers.*
+*Same public data and logic as our engine — these land on our exact published numbers. The notebooks run the headline claimed → measured; the full C0–C7 gate suite lives in the reports.*
