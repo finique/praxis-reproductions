@@ -8,6 +8,7 @@ This is [Praxis](https://market-graphs.com/praxis): not a strategy to trade — 
 |---|---|---|---|
 | **The Volatility Edge** — A Dual Approach for VIX ETNs Trading (2025) | Volatility | 🟢 Validated (~0.9, not the 1.0 headline) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/372649-the-volatility-edge.ipynb) |
 | **Diversified reward-risk parity** in portfolio construction (2021) | Equities | 🟡 Overstated (replicates; the +48bp edge is noise, t = 0.69) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/359491-reward-risk-parity.ipynb) |
+| **Lazy Factor and Probability Weighting** — gold/Bitcoin mean-variance (2023) | Cross-asset | 🔴 Fails (claimed $136,216 is arithmetically impossible; honest run $4,374) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/360760-gold-btc-lazy-factor.ipynb) |
 
 Full reports & methodology: **https://market-graphs.com/praxis**
 
