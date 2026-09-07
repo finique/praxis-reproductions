@@ -1,0 +1,68 @@
+{
+ "SP500": {
+  "rows": 14286,
+  "start": "1970-01-05",
+  "end": "2026-08-31",
+  "sha256": "2c6ce462c63863fdab838ef7331ffba085e95f51c0a4d08abf25ceb12c9e0b6b",
+  "sources": {
+   "index": "SP500",
+   "country": "US",
+   "start": "1970-01-05",
+   "end": "2026-08-31",
+   "n_days": 14286,
+   "index_source": {
+    "splice": "1988-01-04",
+    "pre_splice": "^GSPC + Shiller D/P accrual",
+    "post_splice": "^SP500TR (real total-return index)"
+   },
+   "bills": {
+    "source": "FRED DTB3 (3-month T-bill, daily)",
+    "last_obs": "2026-09-03"
+   }
+  }
+ },
+ "DAX": {
+  "rows": 9777,
+  "start": "1988-01-04",
+  "end": "2026-08-31",
+  "sha256": "a1e3939fc49543672a8e1570276ee4688c7863d1228f3ea03e5b52bd034ecdba",
+  "sources": {
+   "index": "DAX",
+   "country": "DE",
+   "start": "1988-01-04",
+   "end": "2026-08-31",
+   "n_days": 9777,
+   "index_source": {
+    "source": "^GDAXI (performance index = total return)",
+    "first": "1987-12-30"
+   },
+   "bills": {
+    "source": "FRED/OECD IR3TIB01DEM156N (3-month interbank, monthly)",
+    "last_obs": "2026-06-01"
+   }
+  }
+ },
+ "N225": {
+  "rows": 13931,
+  "start": "1970-01-06",
+  "end": "2026-08-31",
+  "sha256": "48b246452e40815f8210fbb3ee1861a89d3cb82244f1c0eb298713de81cafcb3",
+  "sources": {
+   "index": "N225",
+   "country": "JP",
+   "start": "1970-01-06",
+   "end": "2026-08-31",
+   "n_days": 13931,
+   "index_source": {
+    "source": "^N225 price + TSE-1 dividend-yield proxy (estimated)",
+    "proxy": "NIKKEI_DIV_YIELD table, linear interp, daily accrual"
+   },
+   "bills": {
+    "source": "FRED/IMF INTGSTJPM193N (T-bill) \u2192 FRED/OECD IR3TIB01JPM156N from 2002-04",
+    "splice": "2002-04-01",
+    "overlap_mean_gap_bp": 19.1,
+    "last_obs": "2026-05-01"
+   }
+  }
+ }
+}
