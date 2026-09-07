@@ -19,6 +19,8 @@ This is [Praxis](https://market-graphs.com/praxis): not a strategy to trade — 
 Full reports & methodology: **https://market-graphs.com/praxis**
 
 
+**Data folders for Praxis Pro notebooks (`358121-vx-data/`, `359741-weights/`, `363490-data/`):** kept public on purpose. They are inputs (Cboe settlements, frozen index and bill series, trained weights), not audit content; a member's downloaded notebook fetches them from these paths so it runs unchanged in Colab. The audits themselves live behind the library gate.
+
 **Data note (363490):** the jump-model notebook ships the exact public total-return index and bill series it was validated on (`363490-data/`, sha256 in `MANIFEST.json`: S&P 500 = the real total-return index from 1988 with Shiller's dividends accrued onto the price index before that; DAX = the performance index; Nikkei 225 = price index plus a documented dividend-yield proxy; bills from FRED/OECD/IMF), so it lands on the report's numbers to the decimal.
 
 **Data note:** the 358121 notebook ships a frozen snapshot of Cboe's own public VIX-futures
