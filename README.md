@@ -14,4 +14,9 @@ This is [Praxis](https://market-graphs.com/praxis): not a strategy to trade — 
 
 Full reports & methodology: **https://market-graphs.com/praxis**
 
+
+**Data note:** two notebooks (361154, 361025) consume panels built from licensed
+Databento (CME/ICE) data, which is not redistributed here — [REBUILD.md](REBUILD.md)
+specifies them exactly so you can rebuild under your own Databento entitlement.
+
 *Same public data and logic as our engine — these land on our exact published numbers. The notebooks run the headline claimed → measured; the full C0–C7 gate suite lives in the reports.*
