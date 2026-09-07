@@ -12,12 +12,16 @@ This is [Praxis](https://market-graphs.com/praxis): not a strategy to trade — 
 | **Trend-Following via Dynamic Momentum Learning** — DMA/DMS futures trend (2021) | Futures | 🟡 Overstated (mechanics replicate incl. the 2009 crash-dodge; the +0.42 Sharpe lift measures +0.27 at t = 0.85 and reverses post-publication) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/358063-futures-dynamic-momentum.ipynb) |
 | **Network Momentum across Asset Classes** — graph-learning cross-asset momentum (2023) | Cross-asset futures | 🟡 Overstated (Sharpe 1.51 → 0.62; the network edge over individual momentum is +0.58 but insignificant, and a plain 12-month trend rule 0.80 beats the graph model) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/361154-network-momentum.ipynb) |
 | **Trading with the Momentum Transformer** — attention-LSTM deep momentum network, cross-asset futures (2022) | Cross-asset futures | 🔴 Fails (Sharpe 2.54 → 0.13; its own LSTM benchmark measures −0.09, a plain 12-month trend rule 0.52, and breakeven cost is 0.14bps against a 1–3bps market) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/359741-momentum-transformer.ipynb) |
+| **Trading Signals In VIX Futures** — curve-state expected-utility signal (2021) | Volatility | 🟡 Overstated (mean fold Sharpe 4.53 → 1.58; the 5×550 network approximates a closed form, and the edge dies on the paper's own 20bps) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/358121-vix-futures-trading-signals.ipynb) |
 | **Quantitative Investment Diversification Strategies via Various Risk Models** — 3×3 covariance/optimizer grid, US equities (2024) | Equities (US industries) | 🟡 Overstated (Sharpe 1.04 → 0.60; statistically real but ~2× overstated, and the claimed +41.8%/yr excess measures +9.6% — FF3 α≈0, R²=0.95: closet market-beta) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/finique/praxis-reproductions/blob/main/363172-risk-model-diversification.ipynb) |
 
 Full reports & methodology: **https://market-graphs.com/praxis**
 
 
-**Data note:** three notebooks (361154, 361025, 359741) consume panels built from licensed
+**Data note:** the 358121 notebook ships a frozen snapshot of Cboe's own public VIX-futures
+settlements (`358121-vx-data/`, checksummed) so it lands on the published numbers without
+re-hitting Cboe; set `REFETCH` in the notebook to pull live and diff. Three other notebooks
+(361154, 361025, 359741) consume panels built from licensed
 Databento (CME/ICE) data, which is not redistributed here — [REBUILD.md](REBUILD.md)
 specifies them exactly so you can rebuild under your own Databento entitlement.
 

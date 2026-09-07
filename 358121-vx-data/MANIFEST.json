@@ -1,0 +1,32 @@
+{
+ "vx_settlements.parquet": {
+  "sha256": "140964c4e34a3eebca1035a1027cd2b79eec7668731eca29deca0fc284726040",
+  "bytes": 366078,
+  "dtype": "float64",
+  "rows": 4846,
+  "contracts": 240,
+  "first_trade_date": "2007-06-01",
+  "last_trade_date": "2026-08-31",
+  "first_expiry": "2007-06-20",
+  "last_expiry": "2027-05-19"
+ },
+ "vix_index.parquet": {
+  "sha256": "81188e6b82bf0355d20e4b9b952152223543a0f88a5adfa702df5c52df1d9de1",
+  "bytes": 55546,
+  "dtype": "float64",
+  "rows": 4875
+ },
+ "source": "Cboe daily VX futures settlements (Settle = DCRP, monthly contracts only) + Cboe VIX index daily history",
+ "source_urls": [
+  "https://cdn.cboe.com/data/us/futures/market_statistics/historical_data/VX/",
+  "https://cdn.cboe.com/resources/futures/archive/volume-and-price/",
+  "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
+ ],
+ "vintage": "cboe_vx_2026-09-07",
+ "note": "Columns are keyed by contract expiry (final settlement date). Frozen so the notebook lands on the published numbers without re-hitting Cboe; set REFETCH=True in the notebook to pull live and diff.",
+ "actions_seed0.parquet": {
+  "sha256": "f6792e71c662fb8ad33dff09c4b76f9b91f86ab2fd37b8db992df74f183eb76c",
+  "bytes": 43342,
+  "note": "daily action index (0..4 = the five actions of eq 3.1) behind the published network numbers: kfold_pwl/kfold_exp = the paper 10-fold design, decay_pwl = fitted once through 2020-11-06 and run forward. Shipped because a 5-way argmax over close values is hardware- and seed-dependent; every other number in the notebook is deterministic."
+ }
+}
