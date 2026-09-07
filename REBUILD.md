@@ -1,6 +1,6 @@
-# Rebuilding the futures panels (361154, 361025)
+# Rebuilding the futures panels (361154, 359741, 361025)
 
-Two notebooks in this repository consume reference panels built from **licensed
+Three notebooks in this repository consume reference panels built from **licensed
 Databento market data** (CME Globex + ICE US). Licensed market data is not
 redistributed here — the same line MarketGraphs holds everywhere: analytics and
 code travel, data values do not. This page specifies the panels exactly, so a
@@ -45,7 +45,8 @@ contract's live span.
 - Output: **wide daily close panel** — `DatetimeIndex` named `date`
   (2010-06-07 → 2026-06-29, 4,996 rows) × **40 columns** of canonical asset
   names (e.g. `Light crude oil`, `Gold`, `S&P500`, `US Tsy 10y`, `EUR/USD`).
-- Save as `361154-futures-panel.parquet` next to the notebook.
+- Save as `361154-futures-panel.parquet` next to the notebook. **`359741-momentum-transformer.ipynb`
+  consumes this same file** — identical roll rule, adjustment and shape.
 
 ## `361025-commodity-curve-panel.parquet` — four-point commodity curves
 
