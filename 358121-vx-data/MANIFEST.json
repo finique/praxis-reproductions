@@ -23,10 +23,5 @@
   "https://cdn.cboe.com/api/global/us_indices/daily_prices/VIX_History.csv"
  ],
  "vintage": "cboe_vx_2026-09-07",
- "note": "Columns are keyed by contract expiry (final settlement date). Frozen so the notebook lands on the published numbers without re-hitting Cboe; set REFETCH=True in the notebook to pull live and diff.",
- "actions_seed0.parquet": {
-  "sha256": "f6792e71c662fb8ad33dff09c4b76f9b91f86ab2fd37b8db992df74f183eb76c",
-  "bytes": 43342,
-  "note": "daily action index (0..4 = the five actions of eq 3.1) behind the published network numbers: kfold_pwl/kfold_exp = the paper 10-fold design, decay_pwl = fitted once through 2020-11-06 and run forward. Shipped because a 5-way argmax over close values is hardware- and seed-dependent; every other number in the notebook is deterministic."
- }
+ "note": "Columns are keyed by contract expiry (final settlement date). Frozen so the notebook lands on the published numbers without re-hitting Cboe; set REFETCH=True in the notebook to pull live and diff."
 }
